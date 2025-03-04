@@ -18,11 +18,13 @@ const EnhancedView = forwardRef<Animated.View, ViewProps>((props, ref) => {
     opacity: opacity.value,
   }));
 
+  const combined = [style];
+
   return (
     <Animated.View
       testID="animated-view"
       ref={ref}
-      style={[{width: 100, height: 100}, style, animatedStyle]}
+      style={[{width: 100, height: 100}, combined, animatedStyle]}
       {...rest}
     />
   );
