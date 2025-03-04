@@ -10,8 +10,8 @@ const getDefaultStyle = () => ({
 
 jest.useFakeTimers();
 
-describe('issue2', () => {
-  test('should apply the animated style correctly', async () => {
+describe('issue3', () => {
+  test('toHaveAnimatedStyle should work', async () => {
     const {getByTestId} = render(
       <AnimatedAnotherView style={{backgroundColor: 'red', zIndex: 5}} />,
     );
